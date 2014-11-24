@@ -42,7 +42,7 @@
 			</br><h6 class="margin-base-vertical">GitHub Repos and Repos Contributed to: </h6>
 			<% @repos.each do |element| %>
 				<% if element.text %>
-					<a href="https://www.github.com/<%= @username %>/<%= element.text.gsub(/\s+/, "") %>" target="_blank" alt="<%= element.text.gsub(/\s+/, "") %>" title="<%= element.text.gsub(/\s+/, "") %>"><%= element.text.gsub(/\s+/, "") %></a></br>
+					<a href="https://www.github.com/<%= @username %>/<%= element.text.gsub(/\s+/, "") %>" alt="<%= element.text.gsub(/\s+/, "") %>" title="<%= element.text.gsub(/\s+/, "") %>"><%= element.text.gsub(/\s+/, "") %></a></br>
 				<% end %>
 			<% end %></br>
 
