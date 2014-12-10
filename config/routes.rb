@@ -1,13 +1,19 @@
 Rails.application.routes.draw do
-  get 'session/new'
 
-  get 'session/create'
+	resources :blog
 
-  get 'session/destroy'
+	get "admin" => "session#new"
 
-  get 'blog/show'
+	post "login" => "session#create"
 
-  get 'blog/create'
+	delete 'logout' => 'session#destroy'
+	
+
+	get 'blog/show' => 'blog#show', as: :show_posts
+
+	get 'blog/new' => 'blog#new', as: :new_post
+
+	post 'blog/create' => 'blog#create', as: :create_post
 
 	root :to => "main#show"
 end

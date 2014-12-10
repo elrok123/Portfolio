@@ -1,0 +1,7 @@
+<div class="col-md-9 panel panel-default padding-10 mgn-top-5 standard-height">
+	<%= form_for :post, url: {action: "create"} do |f| %>
+		<%= f.text_field :title %>
+		<%= f.text_area :content %>
+		<%= f.submit "Create" %>
+	<% end %>
+</div>

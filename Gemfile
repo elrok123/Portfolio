@@ -21,6 +21,8 @@ gem 'coffee-rails', '~> 4.0.0'
 	gem 'autoprefixer-rails'
 	gem 'less-rails-bootstrap'
 	gem 'nokogiri'
+	gem 'bcrypt'
+	gem 'pg'
 
 ##### End of Self Added Gems #####
 

@@ -15,8 +15,8 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="/"><img src="/assets/house28.png" class="icon-tiny" />Home</a></li>
-					<li class=""><a href="/blog/show"><img src="/assets/books2.png" class="icon-tiny" />Blog</a></li>
+					<li class="<%= 'active' if params[:controller] == 'main' %>"><a href="<%= root_url %>"><img src="/assets/house28.png" class="icon-tiny" />Home</a></li>
+					<li class="<%= 'active' if params[:controller] == 'blog' %>"><%= link_to image_tag("books2.png", class: "icon-tiny") + "Blog", :blog_show %></li>
 				</ul>
 				<form class="navbar-form navbar-left" role="search">
 					<div class="form-group">

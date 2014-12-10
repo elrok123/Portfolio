@@ -1,17 +1,16 @@
 class BlogController < ApplicationController
-  def show
-  	#Left pane information vars
-  	#
-  	@username = "mccabec123"
-  	@email = "conner@koansystems.co.uk"
-  	@name = "Conner Stephen McCabe"
-  	doc = Nokogiri::HTML(open("https://github.com/#{@username}?tab=repositories"))
-	@repos = doc.css("h3.repo-list-name a")
-	#
-	#End of left pain information vars
-  end
+	def show
+	end
+	def new
+	end
+	def create
+		#Blog Logic
+		@post_to_save = Post.new(post_params)
+		@post_to_save.save
 
-  def create
-	#Blog Logic
-  end
+		redirect_to "/blog/show"
+	end
+	def post_params
+		params.require(:post).permit(:title, :content)
+	end
 end
