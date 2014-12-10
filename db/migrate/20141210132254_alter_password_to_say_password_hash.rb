@@ -1,4 +1,5 @@
 class AlterPasswordToSayPasswordHash < ActiveRecord::Migration
-  def change
-  end
+  	def change
+  		rename_column :users, :password, :password_hash
+  	end
 end

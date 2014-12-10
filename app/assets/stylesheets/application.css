@@ -241,3 +241,11 @@ body {
 .padding-40 {
 	padding: 40px;
 }
+#resume-description {
+	float: left;
+	width: 60% !important;
+}
+#skill-description {
+	float: left;
+	width: 40% !important;
+}

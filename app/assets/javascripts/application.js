@@ -14,3 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+function KeyPress(e) {
+      var evtobj = window.event? event : e
+      if (evtobj.keyCode == 76 && evtobj.ctrlKey) alert("Ctrl+l");
+}
+
+document.onkeydown = KeyPress;

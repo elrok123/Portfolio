@@ -1,5 +1,6 @@
 class BlogController < ApplicationController
 	def show
+		@blog_posts = Post.all
 	end
 	def new
 	end
