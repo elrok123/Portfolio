@@ -1,6 +1,6 @@
 class BlogController < ApplicationController
 	def show
-		@blog_posts = Post.all
+		@blog_posts = Post.all.order("created_at DESC")
 	end
 	def new
 	end
